@@ -17,7 +17,7 @@
     
     
     
-    <title>Linux下vscode C语言 对pow、exp未定义引用问题 | nanodesu~</title>
+    <title>tags: java | nanodesu~</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="http://auaunanodesu.uk" rel="prefetch" />
@@ -217,42 +217,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    
-<article class="article well article-body" id="article">
+                    <article class="article well article-body" id="article-tag">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://auaunanodesu.uk">nanodesu~</a>
         >
-        <span>Linux下vscode C语言 对pow、exp未定义引用问题</span>
+        <span>标签</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">Linux下vscode C语言 对pow、exp未定义引用问题</a>
+                <a href="/tags/java/index.html">java</a>
             </h1>
-        </div>
-        <div class="tag-article">
-            
-            <span class="label label-gal">
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/c-c/">c/c++</a>, 
-                
-                <a href="/tags/vscode/">vscode</a>, 
-                
-                <a href="/tags/linux/">linux</a>
-                
-            </span>
-            
-            <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-02-18
-            </span>
-            
-            <span class="label label-gal">
-                <i class="fa fa-eye"></i>
-            </span>
-            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -260,60 +237,21 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">Linux下vscode C语言 对pow、exp未定义引用问题</a>
+                    <a href="/tags/java/index.html">java</a>
                 </h4>
             </div>
-            <p>
-                <i class="fa fa-calendar"></i> 2018-02-18
-            </p>
-            <p>
-                
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/c-c/">c/c++</a>, 
-                
-                <a href="/tags/vscode/">vscode</a>, 
-                
-                <a href="/tags/linux/">linux</a>
-                
-                
-                
-                <i class="fa fa-eye"></i>
-                
-            </p>
         </center>
     </div>
-    <div class="content-article">
-        <!-- toc -->
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>头文件使用math库时会出现“未定义引用”问题<br>报错：</p>
-<blockquote>
-<p>&#x2F;tmp&#x2F;cct7CPFw.o：在函数‘main’中：<br>19012705.c:(.text+0x88)：对‘pow’未定义的引用<br>collect2: error: ld returned 1 exit status</p>
-</blockquote>
-<p>源代码：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> e 2.718281828</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature, dewpoint, humidex;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;T %f D %f&quot;</span>, &amp;temperature, &amp;dewpoint) == <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        getchar();</span><br><span class="line">        humidex = temperature + (<span class="number">0.5555</span>) * (<span class="number">-10</span> + <span class="number">6.11</span> * <span class="built_in">pow</span>(e, (<span class="number">5417.7530</span> * ((<span class="number">1</span> / <span class="number">273.16</span>) - (<span class="number">1</span> / (dewpoint + <span class="number">273.16</span>))))));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;T %.1f D %.1f H %.1f\n&quot;</span>, temperature, dewpoint, humidex);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在linux终端下也会出现一样问题<br><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-03-47-f014f024258568181a23deab3df5de61-20190212003211677-62f83c-d0216f.png" alt="在这里插入图片描述"></p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>linux中gcc没有默认链接math库</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>vscode工作区文件夹下有一个<code>.vscode</code>文件夹（没有就创建），在该文件下打开<code>settings.json</code>（没有就创建）<br><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-05-16-71ceb99e208aa1ec3d1821040f43b1d2-20190212005510476-708fe5-73fea7.png">左侧的4复制到右侧<br><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-06-47-514022ccb2eb906cc3c9c302c40304f5-20190212005552891-5145a4-4aa3c8.png">在<code>“C”</code>如图加上<code>-lm</code>，保存即可</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-46-55-ce4fa15c78948a3deeb79021bee4e696-80d808-8102c1.png"></p>
-<h2 id="补充1"><a href="#补充1" class="headerlink" title="补充1"></a>补充1</h2><p>linux上c语言的函数库在<code>/usr/lib/</code>目录下，以<code>lib*</code>开头<code>.so</code>为后缀,*为库的名称，比如math库是<code>libm.so</code>,stdio库是<code>libc.so</code>。<br>gcc命令末尾<code>-l库名称</code>就能链接函数库</p>
-<p>…………………………………………………………………………………………………………..</p>
-<h2 id="补充2"><a href="#补充2" class="headerlink" title="补充2"></a>补充2</h2><p>以上内容其实是对<code>code runner</code>插件问题的解决，在调试中仍然会出现问题，这时需要对<code>./.vscode/tasks.json</code>文件进行修改<br><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-40-37-a09302698616ed20f61df61daff50eeb-60b524-056f64.png" alt="20190218005159558"></p>
-
+    <div class="content-article" style="margin-top: 30px;">
+        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
+            
+            <a href="/2020/09/18/2020-9-18/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AEhadoop%E7%8E%AF%E5%A2%83/">尝试配置hadoop环境</a>
+            <br>
+            
+            
+        </div>
     </div>
 </article>
-
-
-<div id="comments-template"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script>
-	if(!window.commentConfig) {
-      window.commentConfig = {}
-      window.commentConfig.title = 'Linux下vscode C语言 对pow、exp未定义引用问题'
-    }
-</script>
-
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -431,17 +369,17 @@
 
                 
                 <li>
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/tags/java/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/tags/java/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/tags/java/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -449,19 +387,19 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/c-c/" style="font-size: 11.673744829298938px;" class="tag-cloud-link">c/c++</a>
+    <a href="/tags/c-c/" style="font-size: 15.895214730449272px;" class="tag-cloud-link">c/c++</a>
     
-    <a href="/tags/vscode/" style="font-size: 15.661001739305362px;" class="tag-cloud-link">vscode</a>
+    <a href="/tags/vscode/" style="font-size: 14.441889308395075px;" class="tag-cloud-link">vscode</a>
     
-    <a href="/tags/linux/" style="font-size: 13.77847612535561px;" class="tag-cloud-link">linux</a>
+    <a href="/tags/linux/" style="font-size: 13.896387141862263px;" class="tag-cloud-link">linux</a>
     
-    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 15.93335834756159px;" class="tag-cloud-link">大数据</a>
+    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 10.363513626907102px;" class="tag-cloud-link">大数据</a>
     
-    <a href="/tags/hadoop/" style="font-size: 9.841943680502185px;" class="tag-cloud-link">hadoop</a>
+    <a href="/tags/hadoop/" style="font-size: 12.522761135543478px;" class="tag-cloud-link">hadoop</a>
     
-    <a href="/tags/java/" style="font-size: 15.629292737974968px;" class="tag-cloud-link">java</a>
+    <a href="/tags/java/" style="font-size: 8.550675893163694px;" class="tag-cloud-link">java</a>
     
-    <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" style="font-size: 15.610161050118085px;" class="tag-cloud-link">安装配置</a>
+    <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" style="font-size: 16.452418622963137px;" class="tag-cloud-link">安装配置</a>
     
 </div>
                 
@@ -576,33 +514,5 @@
 <script src="/js/comment/leancloud.js"></script>
 
 
-
-<script>
-    if(window.commentConfig) {
-      window.commentConfig.id = 'Sun Feb 18 2018 20:37:00 GMT+0800'
-      window.commentConfig.owner = 'nanodesu0721'
-      window.commentConfig.repo = 'nanodesu0721.github.io'
-      window.commentConfig.client_id = 'Ov23lirhCqCMt1kJfdv2'
-      window.commentConfig.client_secret = 'ad6da3ab4f715985f6d90631e13474f6a9fa3d86'
-      window.commentConfig.redirect_uri = 'https://auaunanodesu.uk'
-      window.commentConfig.proxy = 'https://cors-server-ecru.vercel.app/github_access_token'
-    } else {
-      window.commentConfig = {
-      	id: 'Sun Feb 18 2018 20:37:00 GMT+0800',
-        owner: 'nanodesu0721',
-        repo: 'nanodesu0721.github.io',
-        client_id: 'Ov23lirhCqCMt1kJfdv2',
-        client_secret: 'ad6da3ab4f715985f6d90631e13474f6a9fa3d86',
-        redirect_uri: 'https://auaunanodesu.uk',
-        proxy: 'https://cors-server-ecru.vercel.app/github_access_token'
-      }
-    }
-</script>
-  
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    
-<script src="/js/comment/gitalk.js"></script>
-
-  
 
 </html>

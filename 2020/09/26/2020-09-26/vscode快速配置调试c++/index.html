@@ -17,7 +17,7 @@
     
     
     
-    <title>留言板 | nanodesu~</title>
+    <title>vscode快速配置调试c++ | nanodesu~</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="http://auaunanodesu.uk" rel="prefetch" />
@@ -190,7 +190,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/messages">
                         <i class="fa fa-comment"></i>留言
                     </a>
@@ -221,21 +221,42 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <!-- 搜索页面(尽可能接近ZanBlog搜索功能) -->
-
-
+                    
 <article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://auaunanodesu.uk">nanodesu~</a>
+        >
+        <span>vscode快速配置调试c++</span>
+    </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/messages/index.html">留言板</a>
+                <a href="/2020/09/26/2020-09-26/vscode%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95c++/">vscode快速配置调试c++</a>
             </h1>
         </div>
         <div class="tag-article">
+            
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2021-02-28
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/c-c/">c/c++</a>, 
+                
+                <a href="/tags/vscode/">vscode</a>, 
+                
+                <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">安装配置</a>
+                
             </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2020-09-26
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -243,16 +264,58 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/messages/index.html">留言板</a>
+                    <a href="/2020/09/26/2020-09-26/vscode%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95c++/">vscode快速配置调试c++</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2021-02-28
+                <i class="fa fa-calendar"></i> 2020-09-26
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/c-c/">c/c++</a>, 
+                
+                <a href="/tags/vscode/">vscode</a>, 
+                
+                <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">安装配置</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
             </p>
         </center>
     </div>
     <div class="content-article">
-        <p><img src="https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/02/28/%E6%8F%92%E5%9B%BE-min-8a2116.jpg" alt="欢迎留言"></p>
+        <h1 id="vscode快速配置调试c-c"><a href="#vscode快速配置调试c-c" class="headerlink" title="vscode快速配置调试c&#x2F;c++"></a>vscode快速配置调试c&#x2F;c++</h1><!-- toc -->
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>想当初刚刚学c语言时，看中了vscode编辑器，比dev-c++好用多了，但c&#x2F;c++配置文件在网上到处抄过来都不对的痛苦我还历历在目。现在对各方面理解都更深了，所以写一下这篇文章</p>
+<p>事先声明一下，vscode的版本在变，json文件的格式写法也在变，所以这里仅仅作为参考。如果在网上到处看的配置配不对的话，最后的办法就是到官网上看说明文档。</p>
+<h2 id="生成task-json、launch-json文件"><a href="#生成task-json、launch-json文件" class="headerlink" title="生成task.json、launch.json文件"></a>生成task.json、launch.json文件</h2><p>首先要将你代码文件所在的文件夹在vscode中打开，不然是没法调试的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F19%2F20-12-47-0d6404b08685399542f1e0303fd312d0-7b9971-01104e.png"></p>
+<p>然后在左侧一栏中的调试中点击调试和运行</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F19%2F20-13-24-a04e79ea40b3e50328a2f12438c44c3c-910637-c39099.png"></p>
+<p>然后点解<code>c++(GDB/LLDB)</code>，<code>g++ 生成调试活动文件</code>，然后不用管它运行了啥，直接点开<code>.vscode</code>文件夹，修改<code>task.json</code>，<code>lauch.json</code>。其实，如果版本对应的话，从网上抄的这两个文件，然后按照正确的目录格式复制粘贴下来再改也是可以的(不用<code>c++(GDB/LLDB)</code>，<code>g++ 生成调试活动文件</code>这两步了)。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F19%2F20-14-08-38f7ca919c5985eab400cd441787b576-e3203e-ae5ee4.png"></p>
+<h2 id="修改launch-json"><a href="#修改launch-json" class="headerlink" title="修改launch.json"></a>修改launch.json</h2><p>修改过程是一步一步的，如果这过程中你能调试了，那你就不用改了。当然，可能一开始什么都不用改就是对的。</p>
+<p>这个里面最可能出错的是带有<code>$</code>+大括号的各种变量</p>
+<p>这是最开始新生成的<code>launch.json</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F19%2F20-18-22-3c37e07c602c9fc71e01671fd3d71b12-ac7ff7-13facd.png"></p>
+<p>最重要的是<code>“program”</code>参数，需要修改为你生成可执行文件的<strong>绝对路径</strong>(至少我用相对路径是失败了的)</p>
+<p>然后<code>“cwd”</code>的参数是工作路径，也就是你当代码文件所在的路径，一般不会出问题，出问题了就都修改一遍</p>
+<p>这是我的<code>launch.json</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g++ - 生成和调试活动文件&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/home/nanodesu/桌面/everyday-learning2/2020-09-25/new_cpp&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/home/nanodesu/桌面/everyday-learning2/2020-09-25&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="punctuation">&#123;</span></span><br><span class="line">                    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;为gdb启用整齐打印&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-enable-pretty-printing&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">                <span class="punctuation">&#125;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="string">&quot;C/C++: g++ build active file&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/gdb&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="修改task-json"><a href="#修改task-json" class="headerlink" title="修改task.json"></a>修改task.json</h2><p>新生成的<code>task.json</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/14/140-bc36d0.png" alt="新生成的task"></p>
+<p><code>task.json</code>一般不修改就能正常运行了。<code>“cwd”</code>就不用说了，<code>“args”</code>里的其实懂一点g++命令的一眼就看出来了，不懂的自行百度，如果要链接库或者其它选项按照格式往下加就行了</p>
+<p>这里给出我的作为参考：</p>
+<p>其中<code>“lmysqlclient”</code>是调用mysql C api所需的库</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;C/C++: g++ build active file&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/g++&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">            <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot;new_cpp.cpp&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot;new_cpp&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="string">&quot;-lmysqlclient&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;cmd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">            <span class="string">&quot;$gcc&quot;</span></span><br><span class="line">        <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>以上说的一个c&#x2F;c++文件配置调试，加入一个文件夹有多个c++要调试而又不愿意调试一个文件改一次，那么，json文件中的变量<code>$</code>+大括号的含义就要搞清楚然后再写，当然，要是网上抄到了正确的json文件那自然更好<a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/variables-reference">Variables Reference</a></p>
+<p>官方文档说的已经相当详细了，如果网上的抄不对那就多读读官方文档吧。</p>
 
     </div>
 </article>
@@ -263,10 +326,9 @@
 <script>
 	if(!window.commentConfig) {
       window.commentConfig = {}
-      window.commentConfig.title = '留言板'
+      window.commentConfig.title = 'vscode快速配置调试c++'
     }
 </script>
-
 
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
@@ -421,17 +483,17 @@
 
                 
                 <li>
-                    <a href="/messages/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2020/09/26/2020-09-26/vscode%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95c++/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/messages/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2020/09/26/2020-09-26/vscode%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95c++/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/messages/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2020/09/26/2020-09-26/vscode%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95c++/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -439,23 +501,23 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/c-c/" style="font-size: 10.653518910274439px;" class="tag-cloud-link">c/c++</a>
+    <a href="/tags/c-c/" style="font-size: 18.03841529114147px;" class="tag-cloud-link">c/c++</a>
     
-    <a href="/tags/vscode/" style="font-size: 15.03583135599316px;" class="tag-cloud-link">vscode</a>
+    <a href="/tags/vscode/" style="font-size: 9.151694101915714px;" class="tag-cloud-link">vscode</a>
     
-    <a href="/tags/linux/" style="font-size: 11.065400033659373px;" class="tag-cloud-link">linux</a>
+    <a href="/tags/linux/" style="font-size: 15.185047641079949px;" class="tag-cloud-link">linux</a>
     
-    <a href="/tags/mysql/" style="font-size: 16.75143923130448px;" class="tag-cloud-link">mysql</a>
+    <a href="/tags/mysql/" style="font-size: 12.196764247410059px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 19.507270418111617px;" class="tag-cloud-link">数据库</a>
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 13.72079953622518px;" class="tag-cloud-link">数据库</a>
     
-    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 11.505019216079665px;" class="tag-cloud-link">大数据</a>
+    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 12.53743686109501px;" class="tag-cloud-link">大数据</a>
     
-    <a href="/tags/hadoop/" style="font-size: 19.850002665819943px;" class="tag-cloud-link">hadoop</a>
+    <a href="/tags/hadoop/" style="font-size: 17.238232909636608px;" class="tag-cloud-link">hadoop</a>
     
-    <a href="/tags/java/" style="font-size: 14.809834223044557px;" class="tag-cloud-link">java</a>
+    <a href="/tags/java/" style="font-size: 14.236260597553692px;" class="tag-cloud-link">java</a>
     
-    <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" style="font-size: 12.895228895686568px;" class="tag-cloud-link">安装配置</a>
+    <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" style="font-size: 10.742395609348858px;" class="tag-cloud-link">安装配置</a>
     
 </div>
                 
@@ -573,7 +635,7 @@
 
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = 'Sun Feb 28 2021 21:26:56 GMT+0800'
+      window.commentConfig.id = 'Sat Sep 26 2020 19:00:00 GMT+0800'
       window.commentConfig.owner = 'nanodesu0721'
       window.commentConfig.repo = 'nanodesu0721.github.io'
       window.commentConfig.client_id = 'Ov23lirhCqCMt1kJfdv2'
@@ -582,7 +644,7 @@
       window.commentConfig.proxy = 'https://cors-server-ecru.vercel.app/github_access_token'
     } else {
       window.commentConfig = {
-      	id: 'Sun Feb 28 2021 21:26:56 GMT+0800',
+      	id: 'Sat Sep 26 2020 19:00:00 GMT+0800',
         owner: 'nanodesu0721',
         repo: 'nanodesu0721.github.io',
         client_id: 'Ov23lirhCqCMt1kJfdv2',

@@ -17,7 +17,7 @@
     
     
     
-    <title>Linux下vscode C语言 对pow、exp未定义引用问题 | nanodesu~</title>
+    <title>ubuntu上配置odbc | nanodesu~</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="http://auaunanodesu.uk" rel="prefetch" />
@@ -141,6 +141,10 @@
                         </li>
                         
                         <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                        </li>
+                        
+                        <li>
                             <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a>
                         </li>
                         
@@ -223,13 +227,13 @@
         <i class="fa fa-home"></i>
         <a href="http://auaunanodesu.uk">nanodesu~</a>
         >
-        <span>Linux下vscode C语言 对pow、exp未定义引用问题</span>
+        <span>ubuntu上配置odbc</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">Linux下vscode C语言 对pow、exp未定义引用问题</a>
+                <a href="/2020/09/25/2020-09-25/ubuntu%E4%B8%8A%E9%85%8D%E7%BD%AEodbc/">ubuntu上配置odbc</a>
             </h1>
         </div>
         <div class="tag-article">
@@ -237,16 +241,16 @@
             <span class="label label-gal">
                 <i class="fa fa-tags"></i>
                 
-                <a href="/tags/c-c/">c/c++</a>, 
+                <a href="/tags/mysql/">mysql</a>, 
                 
-                <a href="/tags/vscode/">vscode</a>, 
+                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>, 
                 
-                <a href="/tags/linux/">linux</a>
+                <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">安装配置</a>
                 
             </span>
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-02-18
+                <i class="fa fa-calendar"></i> 2020-09-25
             </span>
             
             <span class="label label-gal">
@@ -260,21 +264,21 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">Linux下vscode C语言 对pow、exp未定义引用问题</a>
+                    <a href="/2020/09/25/2020-09-25/ubuntu%E4%B8%8A%E9%85%8D%E7%BD%AEodbc/">ubuntu上配置odbc</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2018-02-18
+                <i class="fa fa-calendar"></i> 2020-09-25
             </p>
             <p>
                 
                 <i class="fa fa-tags"></i>
                 
-                <a href="/tags/c-c/">c/c++</a>, 
+                <a href="/tags/mysql/">mysql</a>, 
                 
-                <a href="/tags/vscode/">vscode</a>, 
+                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>, 
                 
-                <a href="/tags/linux/">linux</a>
+                <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">安装配置</a>
                 
                 
                 
@@ -284,22 +288,43 @@
         </center>
     </div>
     <div class="content-article">
-        <!-- toc -->
+        <h1 id="ubuntu上配置odbc"><a href="#ubuntu上配置odbc" class="headerlink" title="ubuntu上配置odbc"></a>ubuntu上配置odbc</h1><!-- toc -->
 
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>头文件使用math库时会出现“未定义引用”问题<br>报错：</p>
 <blockquote>
-<p>&#x2F;tmp&#x2F;cct7CPFw.o：在函数‘main’中：<br>19012705.c:(.text+0x88)：对‘pow’未定义的引用<br>collect2: error: ld returned 1 exit status</p>
+<p>参考： <a target="_blank" rel="noopener" href="https://www.cnblogs.com/yoyotl/p/9980269.html"><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yoyotl/p/9980269.html">ubuntu安装odbc及（mysql驱动）</a></a></p>
 </blockquote>
-<p>源代码：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> e 2.718281828</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature, dewpoint, humidex;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;T %f D %f&quot;</span>, &amp;temperature, &amp;dewpoint) == <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        getchar();</span><br><span class="line">        humidex = temperature + (<span class="number">0.5555</span>) * (<span class="number">-10</span> + <span class="number">6.11</span> * <span class="built_in">pow</span>(e, (<span class="number">5417.7530</span> * ((<span class="number">1</span> / <span class="number">273.16</span>) - (<span class="number">1</span> / (dewpoint + <span class="number">273.16</span>))))));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;T %.1f D %.1f H %.1f\n&quot;</span>, temperature, dewpoint, humidex);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="安装odbc"><a href="#安装odbc" class="headerlink" title="安装odbc"></a>安装odbc</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install unixodbc</span><br><span class="line">apt-get install unixodbc-dev</span><br></pre></td></tr></table></figure>
 
-<p>在linux终端下也会出现一样问题<br><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-03-47-f014f024258568181a23deab3df5de61-20190212003211677-62f83c-d0216f.png" alt="在这里插入图片描述"></p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>linux中gcc没有默认链接math库</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>vscode工作区文件夹下有一个<code>.vscode</code>文件夹（没有就创建），在该文件下打开<code>settings.json</code>（没有就创建）<br><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-05-16-71ceb99e208aa1ec3d1821040f43b1d2-20190212005510476-708fe5-73fea7.png">左侧的4复制到右侧<br><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-06-47-514022ccb2eb906cc3c9c302c40304f5-20190212005552891-5145a4-4aa3c8.png">在<code>“C”</code>如图加上<code>-lm</code>，保存即可</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-46-55-ce4fa15c78948a3deeb79021bee4e696-80d808-8102c1.png"></p>
-<h2 id="补充1"><a href="#补充1" class="headerlink" title="补充1"></a>补充1</h2><p>linux上c语言的函数库在<code>/usr/lib/</code>目录下，以<code>lib*</code>开头<code>.so</code>为后缀,*为库的名称，比如math库是<code>libm.so</code>,stdio库是<code>libc.so</code>。<br>gcc命令末尾<code>-l库名称</code>就能链接函数库</p>
-<p>…………………………………………………………………………………………………………..</p>
-<h2 id="补充2"><a href="#补充2" class="headerlink" title="补充2"></a>补充2</h2><p>以上内容其实是对<code>code runner</code>插件问题的解决，在调试中仍然会出现问题，这时需要对<code>./.vscode/tasks.json</code>文件进行修改<br><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F18%2F17-40-37-a09302698616ed20f61df61daff50eeb-60b524-056f64.png" alt="20190218005159558"></p>
+
+
+<h2 id="安装mysql驱动"><a href="#安装mysql驱动" class="headerlink" title="安装mysql驱动"></a>安装mysql驱动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install libmyodbc</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F19%2F19-49-19-b1e9fe929e8f5e6c372660bf7567d211-%E9%80%89%E5%8C%BA_137-a3fa23-a8771e.jpg" alt="选区_137"></p>
+<p>只能到mysql官网上下载驱动 <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/connector/odbc/">MySQL Community Downloads</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F19%2F19-59-54-f2b82a6df2feb15d63487b69e9c9dd39-bdf8c9-6b1d5f.png"></p>
+<p>这里会犯难，下载哪个好，点击右边的帮助，可以查看文档：<a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/connector-odbc/en/connector-odbc-installation-binary-deb.html">4.2.3 Installing Connector&#x2F;ODBC from a DEB Distribution</a></p>
+<blockquote>
+<p>mysql-connector-odbc: This driver package installs MySQL ODBC driver libraries and the installer tool<br>mysql-connector-odbc-setup: This setup package provides the GUI configuration widget library</p>
+</blockquote>
+<p>而dbgsym则是含有mysql调试的程序</p>
+<p>下载后执行: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dpkg -i mysql-connector-odbc_8.0.21-1ubuntu18.04_amd64.deb</span><br><span class="line"><span class="built_in">sudo</span> dpkg -i mysql-connector-odbc-setup_8.0.21-1ubuntu18.04_amd64.deb</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置mysql驱动"><a href="#配置mysql驱动" class="headerlink" title="配置mysql驱动"></a>配置mysql驱动</h2><h3 id="配置odbcinst-ini"><a href="#配置odbcinst-ini" class="headerlink" title="配置odbcinst.ini"></a>配置odbcinst.ini</h3><p>我这里deb下载完后的<code>/etc/odbcinst.ini</code>已经自动配置好了</p>
+<p>这里给出我的配置</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[MySQL ODBC 8.0 Unicode Driver]</span></span><br><span class="line"><span class="attr">Driver</span>=/usr/lib/x<span class="number">86_64</span>-linux-gnu/odbc/libmyodbc8w.so</span><br><span class="line"><span class="attr">UsageCount</span>=<span class="number">1</span></span><br><span class="line"> </span><br><span class="line"> <span class="section">[MySQL ODBC 8.0 ANSI Driver]</span></span><br><span class="line"> <span class="attr">Driver</span>=/usr/lib/x<span class="number">86_64</span>-linux-gnu/odbc/libmyodbc8a.so</span><br><span class="line"> <span class="attr">UsageCount</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="配置odbc-ini"><a href="#配置odbc-ini" class="headerlink" title="配置odbc.ini"></a>配置odbc.ini</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[NAME]</span></span><br><span class="line"><span class="attr">Driver</span> = /usr/lib/x<span class="number">86_64</span>-linux-gnu/odbc/libmyodbc8a.so</span><br><span class="line"><span class="attr">SERVER</span>=localhost</span><br><span class="line"><span class="attr">PORT</span>=<span class="number">3306</span></span><br><span class="line"><span class="attr">DATABASE</span>=YOURDATABASE</span><br><span class="line"><span class="attr">USER</span>=root</span><br><span class="line"><span class="attr">PASSWORD</span>=root</span><br></pre></td></tr></table></figure>
+
+<p>中括号NAME随便输就行，方便管理最好输入数据库的名字，DATABASE也要事先建立好，账号密码写上数据库的账号密码</p>
+<p>测试连接数据库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isql -v NAME</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F19%2F20-02-15-f8e9ab35a078b68cbf876e474c656cca-0f5c7b-c2052c.jpg"></p>
+<p>配置成功！</p>
 
     </div>
 </article>
@@ -310,7 +335,7 @@
 <script>
 	if(!window.commentConfig) {
       window.commentConfig = {}
-      window.commentConfig.title = 'Linux下vscode C语言 对pow、exp未定义引用问题'
+      window.commentConfig.title = 'ubuntu上配置odbc'
     }
 </script>
 
@@ -382,13 +407,31 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2020/09/18/2020-9-18/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AEhadoop%E7%8E%AF%E5%A2%83/">尝试配置hadoop环境</a>
+                    <a href="/2020/09/26/2020-09-26/vscode%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95c++/">vscode快速配置调试c++</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">Linux下vscode C语言 对pow、exp未定义引用问题</a>
+                    <a href="/2020/09/25/2020-09-25/ubuntu%E4%B8%8Ac++%E4%BD%BF%E7%94%A8mysql%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93/">ubuntu上c++使用mysql接口调用数据库</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/09/25/2020-09-25/ubuntu%E4%B8%8A%E9%85%8D%E7%BD%AEodbc/">ubuntu上配置odbc</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/09/18/2020-09-18/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AEhadoop%E7%8E%AF%E5%A2%83/">尝试配置hadoop环境</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/02/18/2019-02-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">Linux下vscode C语言 对pow、exp未定义引用问题</a>
                 </span>
             </li>
             
@@ -410,13 +453,31 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">Linux下vscode C语言 对pow、exp未定义引用问题</a>
+                    <a href="/2018/02/18/2019-02-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">Linux下vscode C语言 对pow、exp未定义引用问题</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2020/09/18/2020-9-18/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AEhadoop%E7%8E%AF%E5%A2%83/">尝试配置hadoop环境</a>
+                    <a href="/2020/09/25/2020-09-25/ubuntu%E4%B8%8Ac++%E4%BD%BF%E7%94%A8mysql%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93/">ubuntu上c++使用mysql接口调用数据库</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/09/18/2020-09-18/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AEhadoop%E7%8E%AF%E5%A2%83/">尝试配置hadoop环境</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/09/25/2020-09-25/ubuntu%E4%B8%8A%E9%85%8D%E7%BD%AEodbc/">ubuntu上配置odbc</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020/09/26/2020-09-26/vscode%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95c++/">vscode快速配置调试c++</a>
                 </span>
             </li>
             
@@ -431,17 +492,17 @@
 
                 
                 <li>
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2020/09/25/2020-09-25/ubuntu%E4%B8%8A%E9%85%8D%E7%BD%AEodbc/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2020/09/25/2020-09-25/ubuntu%E4%B8%8A%E9%85%8D%E7%BD%AEodbc/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2018/02/18/2019-2-18/Linux%E4%B8%8Bvscode-C%E8%AF%AD%E8%A8%80-%E5%AF%B9pow%E3%80%81exp%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2020/09/25/2020-09-25/ubuntu%E4%B8%8A%E9%85%8D%E7%BD%AEodbc/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -449,19 +510,23 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/c-c/" style="font-size: 11.673744829298938px;" class="tag-cloud-link">c/c++</a>
+    <a href="/tags/c-c/" style="font-size: 13.236469621167757px;" class="tag-cloud-link">c/c++</a>
     
-    <a href="/tags/vscode/" style="font-size: 15.661001739305362px;" class="tag-cloud-link">vscode</a>
+    <a href="/tags/vscode/" style="font-size: 8.869339622325997px;" class="tag-cloud-link">vscode</a>
     
-    <a href="/tags/linux/" style="font-size: 13.77847612535561px;" class="tag-cloud-link">linux</a>
+    <a href="/tags/linux/" style="font-size: 10.134609673380561px;" class="tag-cloud-link">linux</a>
     
-    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 15.93335834756159px;" class="tag-cloud-link">大数据</a>
+    <a href="/tags/mysql/" style="font-size: 8.110604629110044px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/hadoop/" style="font-size: 9.841943680502185px;" class="tag-cloud-link">hadoop</a>
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 12.749607502635254px;" class="tag-cloud-link">数据库</a>
     
-    <a href="/tags/java/" style="font-size: 15.629292737974968px;" class="tag-cloud-link">java</a>
+    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 19.319177514671736px;" class="tag-cloud-link">大数据</a>
     
-    <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" style="font-size: 15.610161050118085px;" class="tag-cloud-link">安装配置</a>
+    <a href="/tags/hadoop/" style="font-size: 13.190962761214369px;" class="tag-cloud-link">hadoop</a>
+    
+    <a href="/tags/java/" style="font-size: 9.500284312881064px;" class="tag-cloud-link">java</a>
+    
+    <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" style="font-size: 19.869176437359673px;" class="tag-cloud-link">安装配置</a>
     
 </div>
                 
@@ -579,7 +644,7 @@
 
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = 'Sun Feb 18 2018 20:37:00 GMT+0800'
+      window.commentConfig.id = 'Fri Sep 25 2020 12:00:00 GMT+0800'
       window.commentConfig.owner = 'nanodesu0721'
       window.commentConfig.repo = 'nanodesu0721.github.io'
       window.commentConfig.client_id = 'Ov23lirhCqCMt1kJfdv2'
@@ -588,7 +653,7 @@
       window.commentConfig.proxy = 'https://cors-server-ecru.vercel.app/github_access_token'
     } else {
       window.commentConfig = {
-      	id: 'Sun Feb 18 2018 20:37:00 GMT+0800',
+      	id: 'Fri Sep 25 2020 12:00:00 GMT+0800',
         owner: 'nanodesu0721',
         repo: 'nanodesu0721.github.io',
         client_id: 'Ov23lirhCqCMt1kJfdv2',

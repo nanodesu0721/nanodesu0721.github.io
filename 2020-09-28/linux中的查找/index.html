@@ -1,0 +1,817 @@
+<!--
+ * @Author: wesker
+ * @Date: 2022-09-13 16:07:19
+ * @FilePath: \hexo-theme-galf:\others\gal-theme\layout\_partial\head.ejs
+ * Copyright (c) 2022 by wesker hentai121@163.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/imgs/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="なのです">
+    
+    
+    
+    
+    
+    
+    <title>linux中的查找 | nanodesu~</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="http://auaunanodesu.uk" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: '4FSeDpYdOhYQ0I0nESZLlsol-MdYXbMMI',
+        appKey: 'LL8s8hsFqMaNZ30FNGZQmGO0'
+      })
+    </script>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/https:/cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024/10/17/21-19-47-778510d0ba27d165e54705ae6bbdf57e-IMG_20240713_051911_594-01e330.jpg'
+        var previews = 'https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview1-e02141.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview2-d459e3.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview3-9eba0c.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview4-4a3a43.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview5-311d6a.png,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview6-40c93c.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview7-dc6588.png,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview8-3a8d42.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview9-dc47d5.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview10-01793b.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview11-6fd791.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview12-d087c7.png,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview13-7ed0d3.png'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="nanodesu~" type="application/atom+xml">
+</head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://auaunanodesu.uk">
+                
+                <!-- 这里background直接使用logo_image(url) -->
+                <style>
+
+                </style>
+                    
+                <div class="navbar-brand"></div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/tools/">tools</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux/">linux</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/c-c/">c/c++</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/vscode/">vscode</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/linux/">linux</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/messages">
+                        <i class="fa fa-comment"></i>留言
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/urls">
+                        <i class="fa fa-link"></i>常用链接
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/atom.xml">
+                        <i class="fa fa-rss"></i>订阅
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://auaunanodesu.uk">nanodesu~</a>
+        >
+        <span>linux中的查找</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2020-09-28/linux%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/">linux中的查找</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/linux/">linux</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2020-09-28
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2020-09-28/linux%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/">linux中的查找</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2020-09-28
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/linux/">linux</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <!-- toc -->
+
+<h2 id="文件查找"><a href="#文件查找" class="headerlink" title="文件查找"></a>文件查找</h2><h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><blockquote>
+<p>帮助文档 <a target="_blank" rel="noopener" href="http://www.gnu.org/software/findutils/manual/html_mono/find.html">Finding Files</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 常用</span></span><br><span class="line">find [path] -name [filename] <span class="comment"># 查找[path]下[filename]文件</span></span><br><span class="line">find [path] -iname [filename] <span class="comment"># 忽略大小写的查找</span></span><br><span class="line">find [path]  -maxdepth [num] -name [filename] <span class="comment"># -maxdepth +数字为搜索的最大层数</span></span><br><span class="line">find [path] -not -name [filename] <span class="comment"># 查找不匹配的，同 find [path] ! -name [filename]</span></span><br><span class="line">find [path] -name [filename1] -name [filename2] <span class="comment"># 多条件查找</span></span><br><span class="line">find [path] -<span class="built_in">type</span> d -name [<span class="built_in">dirname</span>] <span class="comment"># 查找目录</span></span><br><span class="line">find [path] -<span class="built_in">type</span> d -empty <span class="comment"># 查找空目录</span></span><br><span class="line">find [path] -size [size]  <span class="comment"># 查找文件大小大于/大于/等于size的 </span></span><br><span class="line"><span class="comment"># 进阶用法</span></span><br><span class="line">find [path]  -maxdepth [num] -maxdepth [num2] -name [filename] <span class="comment"># 设置查找的最大深度和最小深度</span></span><br><span class="line">find [path] -c[dimension] [num] <span class="comment"># 查找符合条件修改时间的文件</span></span><br><span class="line">find [path] -perm [permision] <span class="comment"># 查找文件中符合权限的文件</span></span><br><span class="line">find [path] [...] -<span class="built_in">exec</span> [bash instruction] &#123;&#125; \; <span class="comment"># 对查找出的符合条件的文件进行批处理操作</span></span><br><span class="line"><span class="comment"># tips</span></span><br><span class="line">find [path] [...] |<span class="built_in">wc</span> -l  <span class="comment"># 查看有多少条记录</span></span><br></pre></td></tr></table></figure>
+
+<p><em><strong>详细说明</strong></em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找[path]下[filename]文件</span></span><br><span class="line">find [path] -name [filename]</span><br></pre></td></tr></table></figure>
+<p>[path]可以是相对路径可以是绝对路径，也可以是多条路径，[filename]是完全匹配，不是包含子字符串就能匹配成功的，可以使用通配符<code>*</code>，如果命令较为简单，[filename]可以不用加表示字符串的双引号，参数过多会出现识别不了的问题，此时要加上双引号。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F21%2F20-41-47-693e2cc0d2437a5362c76a2f9ea77e25-137-5e394e-cbed33.jpg"></p>
+<p>最大深度设为1的话还可以使用<code>ls</code>+<code>grep</code>：<code>ls /etc | grep conf</code>，除了maxdepth，还有mindepth，用法一样，如果要查找第n层的结果，让最大深度和最小深度的值一样即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -maxdepth +数字为搜索的最大层数</span></span><br><span class="line">find [path]  -maxdapth [num] -name [filename] </span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F21%2F20-45-12-ac386eafb65b726cfb2b976f53dd0801-002-931943-9d9962.jpg"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找目录</span></span><br><span class="line">find [path] -<span class="built_in">type</span> d -name [<span class="built_in">dirname</span>]</span><br></pre></td></tr></table></figure>
+
+<p>如果一个路径的几层都能和[dirname]匹配，那这几层都会在结果中分条显示出来</p>
+<p>type后能接的类型：</p>
+<ul>
+<li><strong>f</strong> 普通文件</li>
+<li><strong>d</strong> 目录</li>
+<li><strong>l</strong> 符号连接</li>
+<li><strong>b</strong> 块设备</li>
+<li><strong>s</strong> 套接字</li>
+</ul>
+<p>匹配多种类型的话用逗号隔开</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F21%2F20-48-14-3807c467f85854d98ac219bf8fc0abb8-001-59e81e-0ea30b.jpg"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 多条件查找</span></span><br><span class="line">find [path] -name [filename1] -name [filename2] </span><br></pre></td></tr></table></figure>
+<p>两个<code>-name</code>之间什么都不加，默认是AND与操作，如果用OR或操作，加上<code>-o</code><br><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F21%2F20-51-11-83a9d864e23331f7dd0de47979cdcbb1-003-3a8603-22dae5.jpg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F21%2F20-54-06-b1ea6921e99af1deaf33003f4ecc6c29-004-d2b40f-45c28d.jpg"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找文件大小大于/大于/等于size的</span></span><br><span class="line">find [path] -size [size]  </span><br></pre></td></tr></table></figure>
+
+<p>[size]前不带符号（没有“&#x3D;”号）如果文件使用[size]个单位的空间（向上取整），则为true，数字前加上“+”号，表示如果文件使用至少n个存储单元，“-”号表示文件使用少于n个存储单元</p>
+<p>[size]数字后不带字母，默认是512字节块，后面可以带上如下单位（区分大小写）：</p>
+<ul>
+<li><p>b（小写），512字节</p>
+</li>
+<li><p>c（小写），1字节</p>
+</li>
+<li><p>w（小写），2字节</p>
+</li>
+<li><p>k（小写），KB</p>
+</li>
+<li><p>M（大写），MB</p>
+</li>
+<li><p>G（大写），GB</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F21%2F20-55-57-a7f008111a6348ca1717a770c8f0a2ae-005-2dd602.jpg"></p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找文件中符合权限的文件</span></span><br><span class="line">find [path] -perm [permision]</span><br></pre></td></tr></table></figure>
+
+<p>linux中权限表示有两种，一种是用数字表示，读权限是4，写是2，执行是1，具有哪个权限加起来就行，比如读写可执行是7，读写是6，读可执行是5。而linux针对不同的用户（user,group,others）又分别赋予权限，所以会看到三个数字，比如777,664等。</p>
+<p>另一种是用字母表示，ugo分别代表user,group,others，a则代表所有人。rwx代表读、写、可执行。</p>
+<p>在表示权限的字母&#x2F;数字前如果什么都不加就是精确匹配，而加上短横线<code>-</code>代表含有表示的权限就能匹配，而<code>/</code>代表三个用户中有一个满足即可（无权限除外）</p>
+<p>做一个简单的小实验，先用bash生成不同权限的文件，忽略others，生成权限不同的16个文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> &#123;1..16&#125;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">	<span class="built_in">touch</span> <span class="string">&quot;<span class="variable">$i</span>.txt&quot;</span></span><br><span class="line">	<span class="built_in">chmod</span> 000 <span class="string">&quot;<span class="variable">$i</span>.txt&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">pm=(0 4 2 6)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> &#123;0..3&#125;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">	<span class="keyword">for</span> j <span class="keyword">in</span> &#123;0..3&#125;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">		name = `<span class="built_in">expr</span> <span class="variable">$i</span> \* 4 + <span class="variable">$j</span> + 1`</span><br><span class="line">		<span class="built_in">chmod</span> <span class="string">&quot;<span class="variable">$&#123;pm[i]&#125;</span><span class="variable">$&#123;pm[j]&#125;</span>&quot;</span>  <span class="string">&quot;<span class="variable">$&#123;name&#125;</span>.txt&quot;</span></span><br><span class="line">	<span class="keyword">done</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F21%2F20-58-46-2af3016fe4d140e11d8a4b7eb11f1f51-006-17ea22.jpg"></p>
+<p>依次执行下面三条命令，为了看的更清楚，使用了<code>-exec</code>，将find的结果用<code>ls -l</code>显示出来，这里的[path]没有用<code>.</code>或者<code>./</code>，是因为会find到<code>.</code>这个目录本身，而目录能正常访问，至少要具有500的权限，所以采用了<code>./*</code>的写法。结果已经很清晰明了了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find ./* -perm 420 -<span class="built_in">exec</span> <span class="built_in">ls</span> -l &#123;&#125; \;</span><br><span class="line">find ./* -perm -420 -<span class="built_in">exec</span> <span class="built_in">ls</span> -l &#123;&#125; \;</span><br><span class="line">find ./* -perm /420 -<span class="built_in">exec</span> <span class="built_in">ls</span> -l &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F21%2F21-06-49-1bcbae9c91f4c10de30c5bf28fc9692c-007-3497fe.jpg"></p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'linux中的查找'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            なのです
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F17%2F21-19-47-778510d0ba27d165e54705ae6bbdf57e-IMG_20240713_051911_594-01e330.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024-03-20/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85DDNS%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E5%8A%A8%E6%80%81IP/">局域网内DDNS域名绑定动态IP</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022-11-29/pycharm-opencv%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">pycharm opencv无法自动补全</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-04-24/ssh%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95%E6%9C%AC%E5%9C%B0localhost/">ssh无法登录本地localhost</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/">vscode源文件和可执行文件分离</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-16/jupyter-lab-build%E6%8A%A5%E9%94%99/">jupyter lab build报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-17/git_clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95%E6%95%B4%E7%90%86/">git_clone加速方法整理</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-02-28/hexo%E5%8D%9A%E5%AE%A2%E5%8E%8B%E7%BC%A9css%E3%80%81js%E7%AD%89%E6%96%87%E4%BB%B6/">hexo博客压缩css、js等文件</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-02-03/%E5%AE%89%E8%A3%85obs-studio%E6%8A%A5%E9%94%99/">安装obs-studio报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-01-27/hexo%E5%8D%9A%E5%AE%A2%E5%AE%89%E8%A3%85live2d(gal%E4%B8%BB%E9%A2%98)/">hexo博客安装live2d(gal主题)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-01-11/%E5%BA%9F%E7%89%A9%E5%88%A9%E7%94%A8--%E6%97%A7%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">废物利用--旧手机搭建服务器</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-09-25/ubuntu%E4%B8%8A%E9%85%8D%E7%BD%AEodbc/">ubuntu上配置odbc</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-09-28/linux%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/">linux中的查找</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-10-05/%E7%A6%81%E7%94%A8%E9%94%AE%E7%9B%98%E4%B8%8A%E7%9A%84%E6%8C%89%E9%94%AE/">linux禁用键盘上的按键</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-09-18/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AEhadoop%E7%8E%AF%E5%A2%83/">尝试配置hadoop环境</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-12-15/kafka%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">kafka安装配置</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-02-03/%E5%AE%89%E8%A3%85obs-studio%E6%8A%A5%E9%94%99/">安装obs-studio报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-11-22/javafx%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/">javafx设置背景图片</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-16/jupyter-lab-build%E6%8A%A5%E9%94%99/">jupyter lab build报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-17/git_clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95%E6%95%B4%E7%90%86/">git_clone加速方法整理</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/">vscode源文件和可执行文件分离</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2020-09-28/linux%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2020-09-28/linux%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2020-09-28/linux%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/c-c/" style="font-size: 11.16681394783324px;" class="tag-cloud-link">c/c++</a>
+    
+    <a href="/tags/vscode/" style="font-size: 9.697809062284612px;" class="tag-cloud-link">vscode</a>
+    
+    <a href="/tags/linux/" style="font-size: 9.733612913449505px;" class="tag-cloud-link">linux</a>
+    
+    <a href="/tags/mysql/" style="font-size: 17.49928110686196px;" class="tag-cloud-link">mysql</a>
+    
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14.714386530466708px;" class="tag-cloud-link">数据库</a>
+    
+    <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" style="font-size: 17.44233353224939px;" class="tag-cloud-link">安装配置</a>
+    
+    <a href="/tags/x-org/" style="font-size: 16.180997719055007px;" class="tag-cloud-link">x.org</a>
+    
+    <a href="/tags/wine/" style="font-size: 16.987839000297296px;" class="tag-cloud-link">wine</a>
+    
+    <a href="/tags/bug/" style="font-size: 14.693736016532391px;" class="tag-cloud-link">bug</a>
+    
+    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 14.044333973037348px;" class="tag-cloud-link">大数据</a>
+    
+    <a href="/tags/hadoop/" style="font-size: 13.465803354837439px;" class="tag-cloud-link">hadoop</a>
+    
+    <a href="/tags/java/" style="font-size: 15.034010006520031px;" class="tag-cloud-link">java</a>
+    
+    <a href="/tags/sql/" style="font-size: 17.408475634477586px;" class="tag-cloud-link">sql</a>
+    
+    <a href="/tags/hbase/" style="font-size: 13.537026632483816px;" class="tag-cloud-link">hbase</a>
+    
+    <a href="/tags/hexo/" style="font-size: 8.69459012413536px;" class="tag-cloud-link">hexo</a>
+    
+    <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 14.456696428961836px;" class="tag-cloud-link">博客</a>
+    
+    <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 8.018414298325702px;" class="tag-cloud-link">前端</a>
+    
+    <a href="/tags/kafka/" style="font-size: 19.852381883258737px;" class="tag-cloud-link">kafka</a>
+    
+    <a href="/tags/python/" style="font-size: 9.454466661782782px;" class="tag-cloud-link">python</a>
+    
+    <a href="/tags/pyecharts/" style="font-size: 11.810005232313781px;" class="tag-cloud-link">pyecharts</a>
+    
+    <a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 19.102824166118197px;" class="tag-cloud-link">绘图</a>
+    
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 9.586884418065772px;" class="tag-cloud-link">数据可视化</a>
+    
+    <a href="/tags/%E5%85%B3%E7%B3%BB%E5%9B%BE/" style="font-size: 19.203600119892712px;" class="tag-cloud-link">关系图</a>
+    
+    <a href="/tags/win7/" style="font-size: 15.497060752754965px;" class="tag-cloud-link">win7</a>
+    
+    <a href="/tags/github/" style="font-size: 19.727363884965964px;" class="tag-cloud-link">github</a>
+    
+    <a href="/tags/github-action/" style="font-size: 18.005687747369226px;" class="tag-cloud-link">github action</a>
+    
+    <a href="/tags/javafx/" style="font-size: 18.295924602032756px;" class="tag-cloud-link">javafx</a>
+    
+    <a href="/tags/css/" style="font-size: 15.67677642263418px;" class="tag-cloud-link">css</a>
+    
+    <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 19.75731159764186px;" class="tag-cloud-link">内网穿透</a>
+    
+    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 13.227744407406462px;" class="tag-cloud-link">服务器</a>
+    
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 14.996919155473321px;" class="tag-cloud-link">网络</a>
+    
+    <a href="/tags/android/" style="font-size: 17.178455194721778px;" class="tag-cloud-link">android</a>
+    
+    <a href="/tags/js/" style="font-size: 17.44070428568155px;" class="tag-cloud-link">js</a>
+    
+    <a href="/tags/html/" style="font-size: 14.498170614436887px;" class="tag-cloud-link">html</a>
+    
+    <a href="/tags/gulp/" style="font-size: 10.09334388056963px;" class="tag-cloud-link">gulp</a>
+    
+    <a href="/tags/jupyter/" style="font-size: 17.871257956810116px;" class="tag-cloud-link">jupyter</a>
+    
+    <a href="/tags/kite/" style="font-size: 18.190032702109193px;" class="tag-cloud-link">kite</a>
+    
+    <a href="/tags/opencv/" style="font-size: 17.24275323104299px;" class="tag-cloud-link">opencv</a>
+    
+    <a href="/tags/pycharm/" style="font-size: 14.90456756396641px;" class="tag-cloud-link">pycharm</a>
+    
+    <a href="/tags/ssh/" style="font-size: 10.001934272228944px;" class="tag-cloud-link">ssh</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.kkgal.com/" target="_blank">忧郁的弟弟</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/nanodesu0721/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://bangumi.tv/user/819951" target="_blank">Bangumi</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 なのです Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+    
+    <script src="/live2d/autoload.js"></script>
+    
+    
+    <script src="/js/clipboard/clipboard.min.js"></script>
+    <script src="/js/custom.js"></script>
+    
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: 'https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/blogbackground/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+
+<script src="/js/comment/leancloud.js"></script>
+
+
+
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Mon Sep 28 2020 12:00:00 GMT+0800'
+      window.commentConfig.owner = 'nanodesu0721'
+      window.commentConfig.repo = 'nanodesu0721.github.io'
+      window.commentConfig.client_id = 'Ov23lirhCqCMt1kJfdv2'
+      window.commentConfig.client_secret = 'ad6da3ab4f715985f6d90631e13474f6a9fa3d86'
+      window.commentConfig.redirect_uri = 'https://auaunanodesu.uk'
+      window.commentConfig.proxy = 'https://cors-server-ecru.vercel.app/github_access_token'
+    } else {
+      window.commentConfig = {
+      	id: 'Mon Sep 28 2020 12:00:00 GMT+0800',
+        owner: 'nanodesu0721',
+        repo: 'nanodesu0721.github.io',
+        client_id: 'Ov23lirhCqCMt1kJfdv2',
+        client_secret: 'ad6da3ab4f715985f6d90631e13474f6a9fa3d86',
+        redirect_uri: 'https://auaunanodesu.uk',
+        proxy: 'https://cors-server-ecru.vercel.app/github_access_token'
+      }
+    }
+</script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    
+<script src="/js/comment/gitalk.js"></script>
+
+  
+
+</html>

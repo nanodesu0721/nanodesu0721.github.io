@@ -1,0 +1,772 @@
+<!--
+ * @Author: wesker
+ * @Date: 2022-09-13 16:07:19
+ * @FilePath: \hexo-theme-galf:\others\gal-theme\layout\_partial\head.ejs
+ * Copyright (c) 2022 by wesker hentai121@163.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/imgs/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="なのです">
+    
+    
+    
+    
+    
+    
+    <title>javafx设置背景图片 | nanodesu~</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="http://auaunanodesu.uk" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: '4FSeDpYdOhYQ0I0nESZLlsol-MdYXbMMI',
+        appKey: 'LL8s8hsFqMaNZ30FNGZQmGO0'
+      })
+    </script>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/https:/cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024/10/17/21-19-47-778510d0ba27d165e54705ae6bbdf57e-IMG_20240713_051911_594-01e330.jpg'
+        var previews = 'https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview1-e02141.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview2-d459e3.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview3-9eba0c.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview4-4a3a43.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview5-311d6a.png,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview6-40c93c.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview7-dc6588.png,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview8-3a8d42.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview9-dc47d5.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview10-01793b.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview11-6fd791.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview12-d087c7.png,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview13-7ed0d3.png'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="nanodesu~" type="application/atom+xml">
+</head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://auaunanodesu.uk">
+                
+                <!-- 这里background直接使用logo_image(url) -->
+                <style>
+
+                </style>
+                    
+                <div class="navbar-brand"></div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/tools/">tools</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux/">linux</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/c-c/">c/c++</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/vscode/">vscode</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/linux/">linux</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/messages">
+                        <i class="fa fa-comment"></i>留言
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/urls">
+                        <i class="fa fa-link"></i>常用链接
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/atom.xml">
+                        <i class="fa fa-rss"></i>订阅
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://auaunanodesu.uk">nanodesu~</a>
+        >
+        <span>javafx设置背景图片</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2020-11-22/javafx%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/">javafx设置背景图片</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/java/">java</a>, 
+                
+                <a href="/tags/javafx/">javafx</a>, 
+                
+                <a href="/tags/css/">css</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2020-11-22
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2020-11-22/javafx%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/">javafx设置背景图片</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2020-11-22
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/java/">java</a>, 
+                
+                <a href="/tags/javafx/">javafx</a>, 
+                
+                <a href="/tags/css/">css</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <p>使用css setstyle方式<br>但使用IntelliJ IDEA时,在写路径时会提示错误,但实际上是可以不管的<br>路径写项目的工作目录的相对路径即可</p>
+<p>项目的路径如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">├── pom.xml</span><br><span class="line">├── src</span><br><span class="line">│   ├── data</span><br><span class="line">│   │   ├── Book_opened.png</span><br><span class="line">│   │   ├── Book_opened.svg</span><br><span class="line">│   │   └── illust_75942276_20200606_004558.jpg</span><br><span class="line">│   ├── main</span><br><span class="line">│   │   └── java</span><br><span class="line">│   │       └── com</span><br><span class="line">│   │           └── loli</span><br><span class="line">│   │               └── library</span><br><span class="line">│   │                   ├── App.java</span><br><span class="line">│   │                   ├── LoginStage.java</span><br><span class="line">│   │                   ├── ManagerStage.java</span><br><span class="line">│   │                   └── SQLPlugin.java</span><br><span class="line">│   ├── style</span><br><span class="line">│   │   ├── background.css</span><br><span class="line">│   │   ├── background_test.css</span><br><span class="line">│   │   └── test_css.html</span><br><span class="line">│   └── <span class="built_in">test</span></span><br><span class="line">│       └── java</span><br><span class="line">│           └── com</span><br><span class="line">│               └── loli</span><br><span class="line">│                   └── library</span><br><span class="line">│                       └── AppTest.java</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="setsyle方式"><a href="#setsyle方式" class="headerlink" title="setsyle方式:"></a>setsyle方式:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BorderPane</span> <span class="variable">backpane</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BorderPane</span>();</span><br><span class="line">backpane.setStyle(<span class="string">&quot;-fx-background-image: url(&quot;</span> + <span class="string">&quot;file:src/data/illust_75942276_20200606_004558.jpg&quot;</span> + <span class="string">&quot;); &quot;</span> +</span><br><span class="line">                <span class="string">&quot;-fx-background-position: center center; &quot;</span> +</span><br><span class="line">                <span class="string">&quot;-fx-background-repeat: stretch;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;-fx-background-color:  transparent;&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F22%2F20-11-27-bb43802081d7e8b799ce29370a44ad82-20201122102137456-0ca524.png" alt="在这里插入图片描述">错误的提示不用管</p>
+<h2 id="css文件方式-报错"><a href="#css文件方式-报错" class="headerlink" title="css文件方式[报错]:"></a>css文件方式[报错]:</h2><p>这是在<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/9738146/javafx-how-to-set-scene-background-image">JavaFX How to set scene background image</a>上抄的方法,但奈何无论怎么改图片的位置,改图片的相对&#x2F;绝对路径,或者改成链接,都不管用</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#pane</span>&#123;</span><br><span class="line">    -fx-<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">file:src/data/illust_75942276_20200606_004558.jpg</span>);</span><br><span class="line">    -fx-<span class="attribute">background-repeat</span>: stretch;</span><br><span class="line">    <span class="comment">/*-fx-background-size: 900 506;*/</span></span><br><span class="line">    -fx-<span class="attribute">background-position</span>: center center;</span><br><span class="line">    <span class="comment">/*-fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StackPane</span> <span class="variable">stackPane</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StackPane</span>();</span><br><span class="line">stackPane.setId(<span class="string">&quot;pane&quot;</span>);</span><br><span class="line"><span class="type">Scene</span> <span class="variable">scene</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scene</span>(stackPane,<span class="number">600</span>,<span class="number">400</span>);</span><br><span class="line">scene.getStylesheets().add(getClass().getResource(<span class="string">&quot;file:src/style/background.css&quot;</span>).toExternalForm());</span><br></pre></td></tr></table></figure>
+<p>报错:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Exception <span class="keyword">in</span> Application start method</span><br><span class="line">java.lang.reflect.InvocationTargetException</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:498)</span><br><span class="line">	at com.sun.javafx.application.LauncherImpl.launchApplicationWithArgs(LauncherImpl.java:389)</span><br><span class="line">	at com.sun.javafx.application.LauncherImpl.launchApplication(LauncherImpl.java:328)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:498)</span><br><span class="line">	at sun.launcher.LauncherHelper<span class="variable">$FXHelper</span>.main(LauncherHelper.java:767)</span><br><span class="line">Caused by: java.lang.RuntimeException: Exception <span class="keyword">in</span> Application start method</span><br><span class="line">	at com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:917)</span><br><span class="line">	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication<span class="variable">$412</span>(LauncherImpl.java:182)</span><br><span class="line">	at java.lang.Thread.run(Thread.java:748)</span><br><span class="line">Caused by: java.lang.NullPointerException</span><br><span class="line">	at com.loli.library.LoginStage.&lt;init&gt;(LoginStage.java:54)</span><br><span class="line">	at com.loli.library.App.start(App.java:17)</span><br><span class="line">	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1<span class="variable">$419</span>(LauncherImpl.java:863)</span><br><span class="line">	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait<span class="variable">$399</span>(PlatformImpl.java:326)</span><br><span class="line">	at com.sun.javafx.application.PlatformImpl.lambda$null<span class="variable">$397</span>(PlatformImpl.java:295)</span><br><span class="line">	at java.security.AccessController.doPrivileged(Native Method)</span><br><span class="line">	at com.sun.javafx.application.PlatformImpl.lambda$runLater<span class="variable">$398</span>(PlatformImpl.java:294)</span><br><span class="line">	at com.sun.glass.ui.InvokeLaterDispatcher<span class="variable">$Future</span>.run(InvokeLaterDispatcher.java:95)</span><br><span class="line">	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)</span><br><span class="line">	at com.sun.glass.ui.gtk.GtkApplication.lambda$null<span class="variable">$203</span>(GtkApplication.java:139)</span><br><span class="line">	... 1 more</span><br><span class="line">Exception running application com.loli.library.App</span><br></pre></td></tr></table></figure>
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'javafx设置背景图片'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            なのです
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F17%2F21-19-47-778510d0ba27d165e54705ae6bbdf57e-IMG_20240713_051911_594-01e330.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024-03-20/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85DDNS%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E5%8A%A8%E6%80%81IP/">局域网内DDNS域名绑定动态IP</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022-11-29/pycharm-opencv%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">pycharm opencv无法自动补全</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-04-24/ssh%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95%E6%9C%AC%E5%9C%B0localhost/">ssh无法登录本地localhost</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/">vscode源文件和可执行文件分离</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-16/jupyter-lab-build%E6%8A%A5%E9%94%99/">jupyter lab build报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-17/git_clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95%E6%95%B4%E7%90%86/">git_clone加速方法整理</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-02-28/hexo%E5%8D%9A%E5%AE%A2%E5%8E%8B%E7%BC%A9css%E3%80%81js%E7%AD%89%E6%96%87%E4%BB%B6/">hexo博客压缩css、js等文件</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-02-03/%E5%AE%89%E8%A3%85obs-studio%E6%8A%A5%E9%94%99/">安装obs-studio报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-01-27/hexo%E5%8D%9A%E5%AE%A2%E5%AE%89%E8%A3%85live2d(gal%E4%B8%BB%E9%A2%98)/">hexo博客安装live2d(gal主题)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-01-11/%E5%BA%9F%E7%89%A9%E5%88%A9%E7%94%A8--%E6%97%A7%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">废物利用--旧手机搭建服务器</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-09-25/ubuntu%E4%B8%8Ac++%E4%BD%BF%E7%94%A8mysql%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93/">ubuntu上c++使用mysql接口调用数据库</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-10-05/linux%E5%AE%89%E8%A3%85latex/">linux安装latex</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-09-30/ubuntu%E5%AE%89%E8%A3%85%E6%A4%8D%E7%89%A9%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8/">ubuntu安装植物大战僵尸</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-10-07/ubuntu%E5%BC%80%E6%9C%BA%E6%8F%90%E7%A4%BA%E9%94%99%E8%AF%AFlocale-check%20%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/">ubuntu开机提示错误locale-check: 没有那个文件或目录</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-12-15/kafka%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">kafka安装配置</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-02-28/hexo%E5%8D%9A%E5%AE%A2%E5%8E%8B%E7%BC%A9css%E3%80%81js%E7%AD%89%E6%96%87%E4%BB%B6/">hexo博客压缩css、js等文件</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-16/jupyter-lab-build%E6%8A%A5%E9%94%99/">jupyter lab build报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024-03-20/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85DDNS%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E5%8A%A8%E6%80%81IP/">局域网内DDNS域名绑定动态IP</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-17/git_clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95%E6%95%B4%E7%90%86/">git_clone加速方法整理</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/">vscode源文件和可执行文件分离</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2020-11-22/javafx%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2020-11-22/javafx%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2020-11-22/javafx%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/c-c/" style="font-size: 16.536545055675425px;" class="tag-cloud-link">c/c++</a>
+    
+    <a href="/tags/vscode/" style="font-size: 13.084441223068076px;" class="tag-cloud-link">vscode</a>
+    
+    <a href="/tags/linux/" style="font-size: 11.300012029994356px;" class="tag-cloud-link">linux</a>
+    
+    <a href="/tags/mysql/" style="font-size: 16.897696389372783px;" class="tag-cloud-link">mysql</a>
+    
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 19.908956559699725px;" class="tag-cloud-link">数据库</a>
+    
+    <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" style="font-size: 12.159824524341794px;" class="tag-cloud-link">安装配置</a>
+    
+    <a href="/tags/x-org/" style="font-size: 19.26582337302004px;" class="tag-cloud-link">x.org</a>
+    
+    <a href="/tags/wine/" style="font-size: 14.281643652811727px;" class="tag-cloud-link">wine</a>
+    
+    <a href="/tags/bug/" style="font-size: 10.363414192086404px;" class="tag-cloud-link">bug</a>
+    
+    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 17.1468426694247px;" class="tag-cloud-link">大数据</a>
+    
+    <a href="/tags/hadoop/" style="font-size: 8.939987510140543px;" class="tag-cloud-link">hadoop</a>
+    
+    <a href="/tags/java/" style="font-size: 16.171588622960677px;" class="tag-cloud-link">java</a>
+    
+    <a href="/tags/sql/" style="font-size: 17.441794085493214px;" class="tag-cloud-link">sql</a>
+    
+    <a href="/tags/hbase/" style="font-size: 11.824891872607436px;" class="tag-cloud-link">hbase</a>
+    
+    <a href="/tags/hexo/" style="font-size: 19.72852809775669px;" class="tag-cloud-link">hexo</a>
+    
+    <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 15.072185859745435px;" class="tag-cloud-link">博客</a>
+    
+    <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 12.870428147095335px;" class="tag-cloud-link">前端</a>
+    
+    <a href="/tags/kafka/" style="font-size: 17.551801534313874px;" class="tag-cloud-link">kafka</a>
+    
+    <a href="/tags/python/" style="font-size: 15.0815728633918px;" class="tag-cloud-link">python</a>
+    
+    <a href="/tags/pyecharts/" style="font-size: 17.99614744777074px;" class="tag-cloud-link">pyecharts</a>
+    
+    <a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 11.914579014186671px;" class="tag-cloud-link">绘图</a>
+    
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 15.689444259455172px;" class="tag-cloud-link">数据可视化</a>
+    
+    <a href="/tags/%E5%85%B3%E7%B3%BB%E5%9B%BE/" style="font-size: 15.422900314388585px;" class="tag-cloud-link">关系图</a>
+    
+    <a href="/tags/win7/" style="font-size: 14.235573407296801px;" class="tag-cloud-link">win7</a>
+    
+    <a href="/tags/github/" style="font-size: 10.152552433595329px;" class="tag-cloud-link">github</a>
+    
+    <a href="/tags/github-action/" style="font-size: 13.02408470825619px;" class="tag-cloud-link">github action</a>
+    
+    <a href="/tags/javafx/" style="font-size: 10.868342138590013px;" class="tag-cloud-link">javafx</a>
+    
+    <a href="/tags/css/" style="font-size: 16.10958668845224px;" class="tag-cloud-link">css</a>
+    
+    <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 17.56746582034693px;" class="tag-cloud-link">内网穿透</a>
+    
+    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 13.697710174639418px;" class="tag-cloud-link">服务器</a>
+    
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 16.810016712497735px;" class="tag-cloud-link">网络</a>
+    
+    <a href="/tags/android/" style="font-size: 8.700187872534737px;" class="tag-cloud-link">android</a>
+    
+    <a href="/tags/js/" style="font-size: 8.646536429452834px;" class="tag-cloud-link">js</a>
+    
+    <a href="/tags/html/" style="font-size: 17.4223496289247px;" class="tag-cloud-link">html</a>
+    
+    <a href="/tags/gulp/" style="font-size: 18.22387998641374px;" class="tag-cloud-link">gulp</a>
+    
+    <a href="/tags/jupyter/" style="font-size: 13.10544753048648px;" class="tag-cloud-link">jupyter</a>
+    
+    <a href="/tags/kite/" style="font-size: 18.244658599513297px;" class="tag-cloud-link">kite</a>
+    
+    <a href="/tags/opencv/" style="font-size: 11.62607619484943px;" class="tag-cloud-link">opencv</a>
+    
+    <a href="/tags/pycharm/" style="font-size: 16.23821433119087px;" class="tag-cloud-link">pycharm</a>
+    
+    <a href="/tags/ssh/" style="font-size: 13.509808264125432px;" class="tag-cloud-link">ssh</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.kkgal.com/" target="_blank">忧郁的弟弟</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/nanodesu0721/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://bangumi.tv/user/819951" target="_blank">Bangumi</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 なのです Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+    
+    <script src="/live2d/autoload.js"></script>
+    
+    
+    <script src="/js/clipboard/clipboard.min.js"></script>
+    <script src="/js/custom.js"></script>
+    
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: 'https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/blogbackground/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+
+<script src="/js/comment/leancloud.js"></script>
+
+
+
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Sun Nov 22 2020 11:00:00 GMT+0800'
+      window.commentConfig.owner = 'nanodesu0721'
+      window.commentConfig.repo = 'nanodesu0721.github.io'
+      window.commentConfig.client_id = 'Ov23lirhCqCMt1kJfdv2'
+      window.commentConfig.client_secret = 'ad6da3ab4f715985f6d90631e13474f6a9fa3d86'
+      window.commentConfig.redirect_uri = 'https://auaunanodesu.uk'
+      window.commentConfig.proxy = 'https://cors-server-ecru.vercel.app/github_access_token'
+    } else {
+      window.commentConfig = {
+      	id: 'Sun Nov 22 2020 11:00:00 GMT+0800',
+        owner: 'nanodesu0721',
+        repo: 'nanodesu0721.github.io',
+        client_id: 'Ov23lirhCqCMt1kJfdv2',
+        client_secret: 'ad6da3ab4f715985f6d90631e13474f6a9fa3d86',
+        redirect_uri: 'https://auaunanodesu.uk',
+        proxy: 'https://cors-server-ecru.vercel.app/github_access_token'
+      }
+    }
+</script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    
+<script src="/js/comment/gitalk.js"></script>
+
+  
+
+</html>

@@ -1,0 +1,792 @@
+<!--
+ * @Author: wesker
+ * @Date: 2022-09-13 16:07:19
+ * @FilePath: \hexo-theme-galf:\others\gal-theme\layout\_partial\head.ejs
+ * Copyright (c) 2022 by wesker hentai121@163.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/imgs/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="なのです">
+    
+    
+    
+    
+    
+    
+    <title>vscode源文件和可执行文件分离 | nanodesu~</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="http://auaunanodesu.uk" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: '4FSeDpYdOhYQ0I0nESZLlsol-MdYXbMMI',
+        appKey: 'LL8s8hsFqMaNZ30FNGZQmGO0'
+      })
+    </script>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/https:/cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024/10/17/21-19-47-778510d0ba27d165e54705ae6bbdf57e-IMG_20240713_051911_594-01e330.jpg'
+        var previews = 'https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview1-e02141.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview2-d459e3.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview3-9eba0c.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview4-4a3a43.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview5-311d6a.png,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview6-40c93c.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview7-dc6588.png,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview8-3a8d42.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview9-dc47d5.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview10-01793b.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview11-6fd791.jpg,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview12-d087c7.png,https://cdn.jsdelivr.net/gh/fnsflmzqdydk/myPicbed/2021/01/12/preview13-7ed0d3.png'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="nanodesu~" type="application/atom+xml">
+</head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://auaunanodesu.uk">
+                
+                <!-- 这里background直接使用logo_image(url) -->
+                <style>
+
+                </style>
+                    
+                <div class="navbar-brand"></div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/tools/">tools</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/linux/">linux</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/c-c/">c/c++</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/vscode/">vscode</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/linux/">linux</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/messages">
+                        <i class="fa fa-comment"></i>留言
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/urls">
+                        <i class="fa fa-link"></i>常用链接
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/atom.xml">
+                        <i class="fa fa-rss"></i>订阅
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://auaunanodesu.uk">nanodesu~</a>
+        >
+        <span>vscode源文件和可执行文件分离</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/">vscode源文件和可执行文件分离</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2021-03-29
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/">vscode源文件和可执行文件分离</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2021-03-29
+            </p>
+            <p>
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>用vscode写c&#x2F;c++时, 为了方便, 会把不同的源文件放在一个文件夹里</p>
+<p>这里不是做项目, 一个源文件就是一个单独的程序 </p>
+<p>然后生成的可执行文件和源代码就会放在一个目录里, 还是同名, 就很容易点错, 所以就想着改改</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F24%2F00-45-26-6adf4abd2201313086acfa0862b1a2bd-0c602d-193747.png" alt="image-20210329094648997"></p>
+<h2 id="环境和版本"><a href="#环境和版本" class="headerlink" title="环境和版本"></a>环境和版本</h2><ul>
+<li>Visual Studio Code 1.54.3</li>
+<li>Liunx Ubuntu 18.04 LTS</li>
+<li>g++ 7.5.0</li>
+</ul>
+<h2 id="code-runner设置"><a href="#code-runner设置" class="headerlink" title="code-runner设置"></a>code-runner设置</h2><p>打开vscode, 菜单栏<code>文件</code>-&gt;<code>首选项</code>-&gt;<code>设置</code></p>
+<img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F24%2F00-46-29-305656ede99c9afc191686496c3da549-5a5587-fe0af6.png" alt="2021-03-29 09-59-00 的屏幕截图" style="zoom: 67%;" />
+
+<p>使用搜索功能, 搜索<code>code-runner</code>并找到<code>Excutor Map</code>, 点击<code>在settings.json</code>编辑</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F24%2F00-47-09-1caf50ff7db653f6b6599b3b918d786d-459cec-690a62.png" alt="image-20210329100143260"></p>
+<p>出来这样的页面, 我们要修改的是<code>cpp</code>这一行, 当然, 其它语言也是一样</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F24%2F00-47-47-9989aee4a4937694ce61b568c92746ac-877886-00d2e5.png" alt="image-20210329100349464"></p>
+<p>修改成如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;cpp&quot;</span>: <span class="string">&quot;cd <span class="variable">$dir</span> &amp;&amp; if [ ! -d \&quot;bin\&quot; ];then mkdir bin;fi  &amp;&amp; g++ <span class="variable">$fileName</span> -o bin/<span class="variable">$fileNameWithoutExt</span> &amp;&amp; bin/<span class="variable">$fileNameWithoutExt</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中<code>if [ ! -d \&quot;bin\&quot; ];then mkdir bin;fi</code>为判断<code>bin</code>是否存在, 如果不存在则创建, 当然, <code>bin</code>这个名字也改成自己喜欢的</p>
+<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><p>配置调试的是<code>launch.json</code>这个文件, 而在调试程序执行前会需要先进行编译生成可执行二进制文件, 这时就需要配置<code>task.json</code>文件</p>
+<p>在<code>launch.json</code>中, 通过改写<code>preLaunchTask</code>参数, 并在<code>task.json</code>中添加参数, 可以达到预先创建<code>bin</code>文件夹的目的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F24%2F00-48-29-c391aeb8cf59a40a683a9a102458b5c8-069-581dd1.jpg" alt="069"></p>
+<p><code>task.json</code>中加上如下任务:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span><span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span><span class="string">&quot;创建bin文件夹&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span><span class="string">&quot; if [ ! -d \&quot;bin\&quot; ];then mkdir bin;fi&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>并在生成可执行文件的参数中, 更改目录</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;$&#123;file&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;$&#123;fileDirname&#125;/bin/$&#123;fileBasenameNoExtension&#125;&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<p><code>launch.json</code>中修改可执行文件的位置</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bin/$&#123;fileBasenameNoExtension&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>lauch.json</code>中添加任务:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;创建bin文件夹&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;C/C++: g++ 生成活动文件&quot;</span></span><br><span class="line">            <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>完整<code>tasks.json</code>参考代码</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span><span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span><span class="string">&quot;创建bin文件夹&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span><span class="string">&quot; if [ ! -d \&quot;bin\&quot; ];then mkdir bin;fi&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppbuild&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;C/C++: g++ 生成活动文件&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/g++&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;$&#123;file&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;$&#123;fileDirname&#125;/bin/$&#123;fileBasenameNoExtension&#125;&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;$gcc&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;detail&quot;</span><span class="punctuation">:</span> <span class="string">&quot;调试器生成的任务。&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>完整的<code>launch.json</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// 使用 IntelliSense 了解相关属性。 </span></span><br><span class="line">    <span class="comment">// 悬停以查看现有属性的描述。</span></span><br><span class="line">    <span class="comment">// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g++ - 生成和调试活动文件&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bin/$&#123;fileBasenameNoExtension&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="punctuation">&#123;</span></span><br><span class="line">                    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;为 gdb 启用整齐打印&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-enable-pretty-printing&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">                <span class="punctuation">&#125;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;创建bin文件夹&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;C/C++: g++ 生成活动文件&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/gdb&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>没必要直接复制粘贴, 版本可能会更改而不适用, 看懂怎么改的即可</p>
+<p>windows系统方法也类似, 要注意的</p>
+<ul>
+<li><p>路径分隔符号不一样, linux是<code>/</code>, windows是<code>\</code></p>
+</li>
+<li><p>创建文件夹的命令需要修改, 这里给出参考</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exist</span> bin ( <span class="built_in">md</span> bin);</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'vscode源文件和可执行文件分离'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            なのです
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/2024%2F10%2F17%2F21-19-47-778510d0ba27d165e54705ae6bbdf57e-IMG_20240713_051911_594-01e330.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024-03-20/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85DDNS%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E5%8A%A8%E6%80%81IP/">局域网内DDNS域名绑定动态IP</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022-11-29/pycharm-opencv%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">pycharm opencv无法自动补全</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-04-24/ssh%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95%E6%9C%AC%E5%9C%B0localhost/">ssh无法登录本地localhost</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/">vscode源文件和可执行文件分离</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-16/jupyter-lab-build%E6%8A%A5%E9%94%99/">jupyter lab build报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-17/git_clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95%E6%95%B4%E7%90%86/">git_clone加速方法整理</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-02-28/hexo%E5%8D%9A%E5%AE%A2%E5%8E%8B%E7%BC%A9css%E3%80%81js%E7%AD%89%E6%96%87%E4%BB%B6/">hexo博客压缩css、js等文件</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-02-03/%E5%AE%89%E8%A3%85obs-studio%E6%8A%A5%E9%94%99/">安装obs-studio报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-01-27/hexo%E5%8D%9A%E5%AE%A2%E5%AE%89%E8%A3%85live2d(gal%E4%B8%BB%E9%A2%98)/">hexo博客安装live2d(gal主题)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-01-11/%E5%BA%9F%E7%89%A9%E5%88%A9%E7%94%A8--%E6%97%A7%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">废物利用--旧手机搭建服务器</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-10-02/tinypng%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/">tinypng图片压缩</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-10-05/linux%E5%AE%89%E8%A3%85latex/">linux安装latex</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-09-18/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AEhadoop%E7%8E%AF%E5%A2%83/">尝试配置hadoop环境</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-11-17/sql%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B0%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E6%8A%A5%E9%94%99/">sql创建函数过程中的报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2020-11-24/hbase%E9%85%8D%E7%BD%AE/">hbase配置</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-01-27/hexo%E5%8D%9A%E5%AE%A2%E5%AE%89%E8%A3%85live2d(gal%E4%B8%BB%E9%A2%98)/">hexo博客安装live2d(gal主题)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-02-28/hexo%E5%8D%9A%E5%AE%A2%E5%8E%8B%E7%BC%A9css%E3%80%81js%E7%AD%89%E6%96%87%E4%BB%B6/">hexo博客压缩css、js等文件</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-03-17/git_clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95%E6%95%B4%E7%90%86/">git_clone加速方法整理</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022-11-29/pycharm-opencv%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">pycharm opencv无法自动补全</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021-04-24/ssh%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95%E6%9C%AC%E5%9C%B0localhost/">ssh无法登录本地localhost</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2021-03-29/vscode%E6%BA%90%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%88%86%E7%A6%BB/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/c-c/" style="font-size: 9.392590325815302px;" class="tag-cloud-link">c/c++</a>
+    
+    <a href="/tags/vscode/" style="font-size: 8.677758200762591px;" class="tag-cloud-link">vscode</a>
+    
+    <a href="/tags/linux/" style="font-size: 18.462995243971708px;" class="tag-cloud-link">linux</a>
+    
+    <a href="/tags/mysql/" style="font-size: 17.638377350957647px;" class="tag-cloud-link">mysql</a>
+    
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 13.628860116440427px;" class="tag-cloud-link">数据库</a>
+    
+    <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" style="font-size: 17.432683210940194px;" class="tag-cloud-link">安装配置</a>
+    
+    <a href="/tags/x-org/" style="font-size: 18.219432952885228px;" class="tag-cloud-link">x.org</a>
+    
+    <a href="/tags/wine/" style="font-size: 14.37829533495733px;" class="tag-cloud-link">wine</a>
+    
+    <a href="/tags/bug/" style="font-size: 18.021015449539142px;" class="tag-cloud-link">bug</a>
+    
+    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 9.905358971009779px;" class="tag-cloud-link">大数据</a>
+    
+    <a href="/tags/hadoop/" style="font-size: 11.667687941310607px;" class="tag-cloud-link">hadoop</a>
+    
+    <a href="/tags/java/" style="font-size: 9.581420819197973px;" class="tag-cloud-link">java</a>
+    
+    <a href="/tags/sql/" style="font-size: 18.137047363979146px;" class="tag-cloud-link">sql</a>
+    
+    <a href="/tags/hbase/" style="font-size: 13.643663176879741px;" class="tag-cloud-link">hbase</a>
+    
+    <a href="/tags/hexo/" style="font-size: 18.542802695949792px;" class="tag-cloud-link">hexo</a>
+    
+    <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 18.076175396855344px;" class="tag-cloud-link">博客</a>
+    
+    <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 14.090954207165439px;" class="tag-cloud-link">前端</a>
+    
+    <a href="/tags/kafka/" style="font-size: 11.96016790434136px;" class="tag-cloud-link">kafka</a>
+    
+    <a href="/tags/python/" style="font-size: 14.714592486861646px;" class="tag-cloud-link">python</a>
+    
+    <a href="/tags/pyecharts/" style="font-size: 17.804772912134734px;" class="tag-cloud-link">pyecharts</a>
+    
+    <a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 13.169651301736675px;" class="tag-cloud-link">绘图</a>
+    
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 18.5442905998429px;" class="tag-cloud-link">数据可视化</a>
+    
+    <a href="/tags/%E5%85%B3%E7%B3%BB%E5%9B%BE/" style="font-size: 11.496025227978878px;" class="tag-cloud-link">关系图</a>
+    
+    <a href="/tags/win7/" style="font-size: 16.95520079189909px;" class="tag-cloud-link">win7</a>
+    
+    <a href="/tags/github/" style="font-size: 12.699052193918167px;" class="tag-cloud-link">github</a>
+    
+    <a href="/tags/github-action/" style="font-size: 14.885308201457924px;" class="tag-cloud-link">github action</a>
+    
+    <a href="/tags/javafx/" style="font-size: 14.654772969889454px;" class="tag-cloud-link">javafx</a>
+    
+    <a href="/tags/css/" style="font-size: 15.379464401702602px;" class="tag-cloud-link">css</a>
+    
+    <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" style="font-size: 17.956329492776042px;" class="tag-cloud-link">内网穿透</a>
+    
+    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 18.030053538900205px;" class="tag-cloud-link">服务器</a>
+    
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 14.546097097317102px;" class="tag-cloud-link">网络</a>
+    
+    <a href="/tags/android/" style="font-size: 11.697092625317708px;" class="tag-cloud-link">android</a>
+    
+    <a href="/tags/js/" style="font-size: 14.616187499985958px;" class="tag-cloud-link">js</a>
+    
+    <a href="/tags/html/" style="font-size: 17.143445973980143px;" class="tag-cloud-link">html</a>
+    
+    <a href="/tags/gulp/" style="font-size: 16.41524981151454px;" class="tag-cloud-link">gulp</a>
+    
+    <a href="/tags/jupyter/" style="font-size: 17.678396815125176px;" class="tag-cloud-link">jupyter</a>
+    
+    <a href="/tags/kite/" style="font-size: 13.27968747929654px;" class="tag-cloud-link">kite</a>
+    
+    <a href="/tags/opencv/" style="font-size: 8.619951776533762px;" class="tag-cloud-link">opencv</a>
+    
+    <a href="/tags/pycharm/" style="font-size: 13.686856773435725px;" class="tag-cloud-link">pycharm</a>
+    
+    <a href="/tags/ssh/" style="font-size: 8.811295120895085px;" class="tag-cloud-link">ssh</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.kkgal.com/" target="_blank">忧郁的弟弟</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/nanodesu0721/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://bangumi.tv/user/819951" target="_blank">Bangumi</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 なのです Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+    
+    <script src="/live2d/autoload.js"></script>
+    
+    
+    <script src="/js/clipboard/clipboard.min.js"></script>
+    <script src="/js/custom.js"></script>
+    
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: 'https://cdn.jsdelivr.net/gh/nanodesu0721/picture-bed/blogbackground/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+
+<script src="/js/comment/leancloud.js"></script>
+
+
+
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Mon Mar 29 2021 20:00:00 GMT+0800'
+      window.commentConfig.owner = 'nanodesu0721'
+      window.commentConfig.repo = 'nanodesu0721.github.io'
+      window.commentConfig.client_id = 'Ov23lirhCqCMt1kJfdv2'
+      window.commentConfig.client_secret = 'ad6da3ab4f715985f6d90631e13474f6a9fa3d86'
+      window.commentConfig.redirect_uri = 'https://auaunanodesu.uk'
+      window.commentConfig.proxy = 'https://cors-server-ecru.vercel.app/github_access_token'
+    } else {
+      window.commentConfig = {
+      	id: 'Mon Mar 29 2021 20:00:00 GMT+0800',
+        owner: 'nanodesu0721',
+        repo: 'nanodesu0721.github.io',
+        client_id: 'Ov23lirhCqCMt1kJfdv2',
+        client_secret: 'ad6da3ab4f715985f6d90631e13474f6a9fa3d86',
+        redirect_uri: 'https://auaunanodesu.uk',
+        proxy: 'https://cors-server-ecru.vercel.app/github_access_token'
+      }
+    }
+</script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    
+<script src="/js/comment/gitalk.js"></script>
+
+  
+
+</html>
